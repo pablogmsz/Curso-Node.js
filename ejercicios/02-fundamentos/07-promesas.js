@@ -34,7 +34,7 @@ const getEmpleado = ( id ) => {
         // Con operador ternario queda más limpio el código.
         empleado ? resolve( empleado ) : reject( `No existe empleado con id ${ id }.` );
     });
-}
+};
 
 // TAREA DEL VÍDEO.
 const getSalario = ( id ) => {
@@ -43,7 +43,7 @@ const getSalario = ( id ) => {
 
         salario ? resolve( salario ) : reject( `No existe salario con id ${ id }.` );
     });
-}
+};
 
 const id = 3;
 
@@ -71,11 +71,11 @@ getEmpleado( id )
 let nombre;
 
 getEmpleado( id )
-    // Podemos concatenar los "then".
+    // Podemos concatenar los ".then".
     .then( empleado => {
         nombre = empleado;
         return getSalario( id )
     })
     .then( salario => console.log(`El empleado ${ nombre } tiene un salario de ${ salario } $.`) )
-    // para capturar las excepciones, usaremos un "catch" global.
+    // para capturar las excepciones, usaremos un ".catch" global.
     .catch( err => console.log( err ) );

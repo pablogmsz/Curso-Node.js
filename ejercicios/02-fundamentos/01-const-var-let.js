@@ -5,7 +5,7 @@ var nombre = "Pablo";
 
 if ( true ) {
     var nombre = "Belén";
-}
+};
 
 console.log(nombre);
 
@@ -14,7 +14,7 @@ let nombre2 = "Pablo";
 
 if ( true ) {
     nombre2 = "Belén";
-}
+};
 
 console.log(nombre2);
 

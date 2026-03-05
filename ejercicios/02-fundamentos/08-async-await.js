@@ -32,7 +32,7 @@ const getEmpleado = ( id ) => {
 
         empleado ? resolve( empleado ) : reject( `No existe empleado con id ${ id }.` );
     });
-}
+};
 
 const getSalario = ( id ) => {
     return new Promise( ( resolve, reject ) => {
@@ -40,7 +40,7 @@ const getSalario = ( id ) => {
 
         salario ? resolve( salario ) : reject( `No existe salario con id ${ id }.` );
     });
-}
+};
 
 const getInfoUsuario = async ( id ) => {
     /**
@@ -58,7 +58,7 @@ const getInfoUsuario = async ( id ) => {
     } catch (error) {
         throw error;
     }
-}
+};
 
 const id = 3;
 

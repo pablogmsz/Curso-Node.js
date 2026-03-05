@@ -9,8 +9,8 @@ const pablo = {
 
     getNombre() {
         return `${ this.nombre } ${ this.apellido } ${ this.poder }`;
-    }
-}
+    },
+};
 
 // console.log( pablo.getNombre() );
 
@@ -28,13 +28,13 @@ const pablo = {
 // function imprimePersona( persona ) {
 //     const { nombre, apellido, poder, edad = 0 } = persona;
 //     console.log(nombre, apellido, poder, edad);
-// }
+// };
 
 // Con la desestructuración, podemos desestructurar directamente el objeto en los argumentos.
 function imprimePersona( { nombre, apellido, poder, edad = 0 } ) {
     nombre = "Belén";
     console.log(nombre, apellido, poder, edad);
-}
+};
 
 imprimePersona( pablo );
 

@@ -39,8 +39,8 @@ const getEmpleado = ( id, callback ) => {
 
     } else {
         callback(`Empleado con id ${ id } no existe.`);
-    }
-}
+    };
+};
 
 // TAREA DEL VÍDEO.
 const getSalario = ( id, callback ) => {
@@ -55,8 +55,8 @@ const getSalario = ( id, callback ) => {
 
     } else {
         callback(`Salario con id ${ id } no existe.`);
-    }
-}
+    };
+};
 
 // console.log( getEmpleado( 3 ));
 
@@ -66,7 +66,7 @@ const id = 3;
 getEmpleado( id, ( err, empleado ) => {
     if ( err ) {
         return console.log(`¡ERROR!: ${ err }`);
-    }
+    };
 
     console.log("¡Empleado existe!");
     console.log(empleado);
@@ -78,7 +78,7 @@ console.log();
 getSalario( id, ( err, salario ) => {
     if ( err ) {
         return console.log(`¡ERROR!: ${ err }`);
-    }
+    };
 
     console.log("¡Salario existe!");
     console.log(salario);
@@ -95,12 +95,12 @@ console.log();
 getEmpleado( id, ( err, empleado ) => {
     if ( err ) {
         return console.log(`¡ERROR!: ${ err }`);
-    }
+    };
 
     getSalario( id, ( err, salario ) => {
         if ( err ) {
             return console.log(`¡ERROR!: ${ err }`);
-        }
+        };
 
         console.log(`El empleado ${ empleado } tiene un salario de: ${ salario } $.`);
     });
