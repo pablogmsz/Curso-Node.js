@@ -17,7 +17,7 @@ const getUsuarioByID = ( id, callback ) => {
     }, 1500 );
 }
 
-// En mucha documentación y paquetes de Node.js, veremos que se pasa como argumento una función.
+// En mucha documentación y paquetes de Node.js veremos que se pasa como argumento una función.
 getUsuarioByID( 10, ( usuario ) => {
     console.log( usuario.id );
     console.log( usuario.nombre.toUpperCase() );

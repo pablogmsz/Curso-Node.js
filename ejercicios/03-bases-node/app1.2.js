@@ -19,5 +19,5 @@ console.clear();
 // const base = 3;
 
 makeFile( argv.b, argv.l, argv.h )
-    .then( nameFile => console.log(nameFile.rainbow, "creado."))
+    .then( nameFile => console.log(nameFile.rainbow, "creado.") )
     .catch( err => console.log(err) );
