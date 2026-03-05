@@ -1,5 +1,5 @@
 // Importamos la librería para escribir en archivos.
-const fs = require("fs");
+// const fs = require("fs");
 const { makeFile } = require("./helpers/multiplicar.js");
 
 console.clear();

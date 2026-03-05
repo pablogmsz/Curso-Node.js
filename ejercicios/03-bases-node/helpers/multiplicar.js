@@ -1,21 +1,26 @@
 const fs = require("fs");
+const colors = require("colors");
 
 // TAREA DEL VÍDEO: HACER LA FUNCIÓN UNA PROMESA.
-const makeFile = async ( base = 5 ) => {
+const makeFile = async ( base = 5, listar = false, hasta = 10 ) => {
     try {
-        console.log("===============");
-        console.log("| Tabla del", base, "|");
-        console.log("===============");
-    
         let data = "";
-    
-        for ( let contador = 1; contador <= 10; contador++ ) {
-            data += ( `${ base } x ${ contador } = ${ base * contador }\n` );
-        }
-    
-        console.log(data);
+        let cli = "";
+
+        for ( let contador = 1; contador <= hasta; contador++ ) {
+            data += `${ base } x ${ contador } = ${ base * contador }\n`;
+            cli += `${ base } ${ "x".green } ${ contador } ${ "=".green } ${ base * contador }\n`;
+        };
         
-        fs.writeFileSync( `tabla-${ base }.txt`, data );
+        if ( listar ) {
+            console.log("================".green);
+            console.log("| Tabla del".green, colors.blue( base ), "|".green);
+            console.log("================".green);
+
+            console.log(cli);
+        };
+        
+        fs.writeFileSync( `./salida/tabla-${ base }.txt`, data );
         
         return `tabla-${ base }.txt`;
 
